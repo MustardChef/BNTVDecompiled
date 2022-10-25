@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/home_root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/home_loading" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ProgressBar android:layout_gravity="center" android:visibility="gone" android:layout_width="50dp" android:layout_height="50dp"/>
+        <com.facebook.shimmer.ShimmerFrameLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/home_loading_shimmer" android:paddingTop="40dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="15dp" app:shimmer_auto_start="true" app:shimmer_base_alpha="0.2" app:shimmer_duration="@integer/loading_time" app:shimmer_highlight_alpha="0.3">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <FrameLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <androidx.cardview.widget.CardView android:layout_gravity="center" android:background="@color/grayTextColor" android:layout_width="125dp" android:layout_height="200dp" android:layout_margin="@dimen/loading_margin" android:translationX="-164dp" app:cardCornerRadius="@dimen/loading_radius"/>
+                    <androidx.cardview.widget.CardView android:layout_gravity="center" android:background="@color/grayTextColor" android:layout_width="148dp" android:layout_height="234dp" android:layout_margin="@dimen/loading_margin" app:cardCornerRadius="@dimen/loading_radius"/>
+                    <androidx.cardview.widget.CardView android:layout_gravity="center" android:background="@color/grayTextColor" android:layout_width="125dp" android:layout_height="200dp" android:layout_margin="@dimen/loading_margin" android:translationX="164dp" app:cardCornerRadius="@dimen/loading_radius"/>
+                </FrameLayout>
+                <include layout="@layout/loading_line_short_center"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/result_padding" android:layout_marginStart="@dimen/result_padding" android:layout_marginEnd="@dimen/result_padding">
+                    <include layout="@layout/loading_list"/>
+                    <include layout="@layout/loading_list"/>
+                    <include layout="@layout/loading_list"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+        <FrameLayout android:id="@+id/home_loading_statusbar" android:layout_width="match_parent" android:layout_height="70dp">
+            <ImageView android:layout_gravity="end|center_vertical" android:id="@+id/home_change_api_loading" android:background="?android:attr/selectableItemBackgroundBorderless" android:layout_width="30dp" android:layout_height="30dp" android:layout_margin="10dp" android:src="@drawable/ic_baseline_keyboard_arrow_down_24" android:contentDescription="@string/home_change_provider_img_des"/>
+        </FrameLayout>
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/home_loading_error" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.google.android.material.button.MaterialButton android:layout_gravity="center" android:id="@+id/home_reload_connectionerror" android:layout_width="wrap_content" android:layout_margin="5dp" android:minWidth="200dp" android:text="@string/reload_error" app:icon="@drawable/ic_baseline_autorenew_24" style="@style/WhiteButton"/>
+        <com.google.android.material.button.MaterialButton android:layout_gravity="center" android:id="@+id/home_reload_connection_open_in_browser" android:layout_width="wrap_content" android:layout_margin="5dp" android:minWidth="200dp" android:text="@string/result_open_in_browser" app:icon="@drawable/ic_baseline_public_24" style="@style/BlackButton"/>
+        <TextView android:textColor="?attr/textColor" android:gravity="center" android:layout_gravity="center" android:id="@+id/result_error_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp"/>
+    </LinearLayout>
+    <androidx.core.widget.NestedScrollView android:id="@+id/home_loaded" android:background="?attr/primaryBlackBackground" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <View android:id="@+id/home_statusbar" android:background="?attr/primaryGrayBackground" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/home_blur_poster" android:layout_width="match_parent" android:layout_height="200dp" android:scaleType="centerCrop"/>
+                <ImageView android:id="@+id/shadow_overlay" android:background="@drawable/background_shadow" android:layout_width="match_parent" android:layout_height="200dp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="100dp">
+                    <LinearLayout android:orientation="horizontal" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <com.airbnb.lottie.LottieAnimationView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginStart="@dimen/dp_16" app:layout_constraintBottom_toBottomOf="@+id/tvLiveTV" app:layout_constraintStart_toEndOf="@+id/tvLiveTV" app:layout_constraintTop_toTopOf="@+id/tvLiveTV" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_rawRes="@raw/dot"/>
+                                <TextView android:textSize="25sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@+id/tvLiveTV" android:paddingTop="10dp" android:paddingBottom="10dp" android:nextFocusLeft="@+id/nav_rail_view" android:nextFocusUp="@+id/nav_rail_view" android:nextFocusDown="@+id/home_change_api" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/live_tv_amp_sports" android:drawablePadding="4dp" android:paddingStart="@dimen/dp_16" style="@style/StyleForTV"/>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <ImageView android:layout_gravity="center_vertical" android:id="@+id/home_change_api" android:background="?android:attr/selectableItemBackgroundBorderless" android:nextFocusLeft="@+id/nav_rail_view" android:nextFocusUp="@+id/tvLiveTV" android:nextFocusDown="@+id/home_main_poster_recyclerview" android:layout_width="30dp" android:layout_height="30dp" android:layout_margin="10dp" android:foreground="@drawable/outline_drawable" android:src="@drawable/ic_baseline_filter_list_24" android:contentDescription="@string/home_change_provider_img_des">
+                                    <requestFocus/>
+                                </ImageView>
+                                <TextView android:textSize="25sp" android:textStyle="bold" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/home_focus_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1"/>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp">
+                                <TextView android:textSize="20sp" android:textColor="?attr/grayTextColor" android:gravity="center_vertical" android:id="@+id/home_provider_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="10dp"/>
+                                <TextView android:textSize="20sp" android:textColor="?attr/grayTextColor" android:gravity="center_vertical" android:id="@+id/home_provider_meta_info" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView android:orientation="horizontal" android:id="@+id/home_main_poster_recyclerview" android:paddingLeft="5dp" android:paddingRight="5dp" android:clipToPadding="false" android:descendantFocusability="afterDescendants" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                </LinearLayout>
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/home_watch_holder" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/home_watch_parent_item_title" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/continue_watching" android:layout_marginEnd="0dp" style="@style/WatchHeaderText"/>
+                <androidx.recyclerview.widget.RecyclerView android:orientation="horizontal" android:id="@+id/home_watch_child_recyclerview" android:paddingLeft="5dp" android:paddingRight="5dp" android:clipToPadding="false" android:descendantFocusability="afterDescendants" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/home_bookmarked_holder" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <HorizontalScrollView android:paddingTop="5dp" android:paddingBottom="5dp" android:fadingEdge="horizontal" android:nextFocusLeft="@+id/nav_rail_view" android:nextFocusUp="@+id/home_watch_child_recyclerview" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="?android:attr/selectableItemBackgroundBorderless" android:nextFocusForward="@+id/home_bookmarked_child_recyclerview" android:requiresFadingEdge="horizontal" android:paddingStart="12dp" android:paddingEnd="12dp">
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <com.google.android.material.button.MaterialButton android:id="@+id/home_type_watching_btt" android:nextFocusLeft="@+id/nav_rail_view" android:nextFocusRight="@+id/home_plan_to_watch_btt" android:text="@string/type_watching" style="@style/RoundedSelectableButton"/>
+                        <com.google.android.material.button.MaterialButton android:id="@+id/home_plan_to_watch_btt" android:nextFocusLeft="@+id/home_type_watching_btt" android:nextFocusRight="@+id/home_type_on_hold_btt" android:text="@string/type_plan_to_watch" style="@style/RoundedSelectableButton"/>
+                        <com.google.android.material.button.MaterialButton android:id="@+id/home_type_on_hold_btt" android:nextFocusLeft="@+id/home_plan_to_watch_btt" android:nextFocusRight="@+id/home_type_dropped_btt" android:text="@string/type_on_hold" style="@style/RoundedSelectableButton"/>
+                        <com.google.android.material.button.MaterialButton android:id="@+id/home_type_dropped_btt" android:nextFocusLeft="@+id/home_type_on_hold_btt" android:nextFocusRight="@+id/home_type_completed_btt" android:text="@string/type_dropped" style="@style/RoundedSelectableButton"/>
+                        <com.google.android.material.button.MaterialButton android:id="@+id/home_type_completed_btt" android:nextFocusLeft="@+id/home_type_dropped_btt" android:text="@string/type_completed" style="@style/RoundedSelectableButton"/>
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <androidx.recyclerview.widget.RecyclerView android:orientation="horizontal" android:id="@+id/home_bookmarked_child_recyclerview" android:paddingLeft="5dp" android:paddingRight="5dp" android:clipToPadding="false" android:descendantFocusability="afterDescendants" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/home_master_recycler" android:nextFocusLeft="@+id/nav_rail_view" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton android:id="@+id/home_api_fab" android:visibility="gone" app:icon="@drawable/ic_baseline_filter_list_24" style="@style/ExtendedFloatingActionButton"/>
+</FrameLayout>

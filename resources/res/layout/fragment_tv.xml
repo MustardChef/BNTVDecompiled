@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/livetv_root" android:background="?attr/primaryGrayBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+        <ImageView android:layout_gravity="center" android:id="@+id/livetv_back" android:background="?android:attr/selectableItemBackgroundBorderless" android:padding="@dimen/dp_16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_baseline_arrow_back_24" android:foregroundGravity="center" app:tint="@android:color/white">
+            <requestFocus/>
+        </ImageView>
+        <TextView android:textSize="@dimen/_20sp" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_16" android:layout_marginRight="@dimen/dp_16" android:text="@string/live_tv_amp_sports"/>
+        <androidx.core.widget.ContentLoadingProgressBar android:layout_gravity="center" android:id="@+id/livetv_loading_bar" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginStart="-35dp" android:progressTint="@color/white" android:foregroundTint="@color/white" style="@style/Widget.AppCompat.ProgressBar"/>
+    </LinearLayout>
+    <com.applovin.mediation.ads.MaxAdView android:id="@+id/adView" android:layout_width="match_parent" android:layout_height="@dimen/banner_height" maxads:adUnitId="649ca821df5cf83f"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.lagradost.cloudstream3.p041ui.AutofitRecyclerView android:orientation="vertical" android:id="@+id/livetv_autofit_results" android:background="?attr/primaryBlackBackground" android:paddingTop="5dp" android:nextFocusLeft="@+id/nav_rail_view" android:clipToPadding="false" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="8dp" android:paddingEnd="8dp" app:spanCount="3"/>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

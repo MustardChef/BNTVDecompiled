@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="300dp" android:layout_height="250dp">
+    <include android:id="@+id/native_icon_and_text_layout" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="8dp" android:layout_marginTop="4dp" android:layout_marginRight="8dp" layout="@layout/max_native_ad_banner_icon_and_text_layout"/>
+    <FrameLayout android:id="@+id/native_media_content_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_above="@+id/native_cta_button" android:layout_below="@+id/native_icon_and_text_layout"/>
+    <Button android:textSize="17sp" android:id="@+id/native_cta_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="4dp" android:layout_marginRight="8dp" android:layout_marginBottom="4dp" android:layout_alignParentBottom="true" style="@style/com.applovin.mediation.nativeAds.MaxNativeAdView.CTAButton"/>
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="@color/primaryBlackBackground"/>
+    </item>
+    <item android:gravity="center" android:height="101dp" android:width="462dp" android:drawable="@drawable/cs3_cloud" android:top="10dp" android:bottom="10dp"/>
+</layer-list>

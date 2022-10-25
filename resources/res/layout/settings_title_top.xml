@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/settings_top_root" android:background="?attr/primaryGrayBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar android:id="@+id/settings_toolbar" android:background="?attr/primaryGrayBackground" android:paddingTop="@dimen/navbar_height" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_scrollFlags="0x5" app:navigationIconTint="?attr/iconColor" app:titleTextColor="?attr/textColor"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout android:id="@android:id/list_container" android:background="?attr/primaryBlackBackground" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

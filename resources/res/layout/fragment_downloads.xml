@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/download_root" android:background="?attr/primaryGrayBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:background="?attr/primaryGrayBackground" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/download_storage_appbar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+            <TextView android:textColor="?attr/textColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:text="@string/download_storage_text"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="12dp" android:layout_marginBottom="5dp">
+                <View android:id="@+id/download_used" android:background="?attr/white" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5"/>
+                <View android:id="@+id/download_app" android:background="?attr/colorPrimary" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.1"/>
+                <View android:id="@+id/download_free" android:background="?attr/grayTextColor" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.1"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <View android:layout_gravity="center_vertical" android:background="?attr/white" android:layout_width="10dp" android:layout_height="10dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_marginEnd="5dp"/>
+                <TextView android:textSize="12sp" android:textColor="?attr/textColor" android:layout_gravity="center_vertical" android:id="@+id/download_used_txt" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <View android:layout_gravity="center_vertical" android:background="?attr/colorPrimary" android:layout_width="10dp" android:layout_height="10dp" android:layout_margin="5dp"/>
+                <TextView android:textSize="12sp" android:textColor="?attr/textColor" android:layout_gravity="center_vertical" android:id="@+id/download_app_txt" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <View android:layout_gravity="center_vertical" android:background="?attr/grayTextColor" android:layout_width="10dp" android:layout_height="10dp" android:layout_margin="5dp"/>
+                <TextView android:textSize="12sp" android:textColor="?attr/textColor" android:layout_gravity="center_vertical" android:id="@+id/download_free_txt" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/download_list" android:background="?attr/primaryBlackBackground" android:padding="10dp" android:nextFocusLeft="@+id/nav_rail_view" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    <TextView android:textSize="20sp" android:id="@+id/text_no_downloads" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textAlignment="center" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <com.facebook.shimmer.ShimmerFrameLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/download_loading" android:paddingTop="40dp" android:layout_width="match_parent" android:layout_height="match_parent" app:shimmer_auto_start="true" app:shimmer_base_alpha="0.2" app:shimmer_duration="@integer/loading_time" app:shimmer_highlight_alpha="0.3">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/loading_margin" android:layout_marginEnd="@dimen/loading_margin">
+            <include layout="@layout/loading_downloads"/>
+            <include layout="@layout/loading_downloads"/>
+            <include layout="@layout/loading_downloads"/>
+            <include layout="@layout/loading_downloads"/>
+            <include layout="@layout/loading_downloads"/>
+            <include layout="@layout/loading_downloads"/>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <com.applovin.mediation.ads.MaxAdView android:layout_gravity="bottom" android:id="@+id/adView" android:layout_width="match_parent" android:layout_height="@dimen/banner_height" maxads:adUnitId="649ca821df5cf83f"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

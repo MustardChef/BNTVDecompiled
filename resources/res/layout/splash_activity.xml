@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/primaryBlackBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.airbnb.lottie.LottieAnimationView android:id="@+id/animation" android:visibility="gone" android:layout_width="match_parent" android:layout_height="300dp" android:layout_alignParentTop="true" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_rawRes="@raw/newyear2022"/>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@+id/imageView11" android:layout_width="200dp" android:layout_height="wrap_content" android:src="@drawable/splash_background" android:scaleType="fitEnd" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16">
+            <TextView android:gravity="center" android:id="@+id/textView16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loading_movie" android:fontFamily="@font/productsans_medium" app:layout_constraintEnd_toEndOf="@+id/imageView11" app:layout_constraintStart_toStartOf="@+id/imageView11" app:layout_constraintTop_toBottomOf="@+id/imageView11"/>
+            <ProgressBar android:layout_gravity="bottom" android:id="@+id/avi" android:visibility="visible" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="8dp" app:layout_constraintBottom_toBottomOf="@+id/textView16" app:layout_constraintStart_toEndOf="@+id/textView16" app:layout_constraintTop_toTopOf="@+id/textView16"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textColor="#b2ffffff" android:gravity="center" android:id="@+id/tvVersion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="48dp" android:text="1.7" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+</RelativeLayout>

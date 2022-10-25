@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference android:icon="@drawable/ic_outline_subtitles_24" android:title="@string/player_subtitles_settings" android:key="@string/subtitle_settings_key" app:summary="@string/player_subtitles_settings_des"/>
+    <Preference android:icon="@drawable/ic_outline_subtitles_24" android:title="@string/chromecast_subtitles_settings" android:key="@string/subtitle_settings_chromecast_key" app:summary="@string/chromecast_subtitles_settings_des"/>
+    <Preference android:icon="@drawable/ic_baseline_hd_24" android:title="@string/watch_quality_pref" android:key="@string/quality_pref_key"/>
+    <Preference android:icon="@drawable/ic_baseline_text_format_24" android:title="@string/limit_title" android:key="@string/prefer_limit_title_key"/>
+    <Preference android:icon="@drawable/ic_baseline_text_format_24" android:title="@string/limit_title_rez" android:key="@string/prefer_limit_title_rez_key"/>
+    <SwitchPreference android:icon="@drawable/ic_baseline_picture_in_picture_alt_24" android:title="@string/picture_in_picture" android:summary="@string/picture_in_picture_des" app:defaultValue="true" app:key="@string/pip_enabled_key"/>
+    <SwitchPreference android:icon="@drawable/ic_baseline_aspect_ratio_24" android:title="@string/player_size_settings" android:summary="@string/player_size_settings_des" app:defaultValue="true" app:key="@string/player_resize_enabled_key"/>
+    <SwitchPreference android:icon="@drawable/ic_baseline_speed_24" android:title="@string/eigengraumode_settings" android:summary="@string/eigengraumode_settings_des" app:defaultValue="true" app:key="@string/playback_speed_enabled_key"/>
+    <SwitchPreference android:icon="@drawable/ic_baseline_ondemand_video_24" android:title="@string/swipe_to_seek_settings" android:summary="@string/swipe_to_seek_settings_des" app:defaultValue="true" app:key="@string/swipe_enabled_key"/>
+    <SwitchPreference android:icon="@drawable/ic_baseline_ondemand_video_24" android:title="@string/swipe_to_change_settings" android:summary="@string/swipe_to_change_settings_des" app:defaultValue="true" app:key="@string/swipe_vertical_enabled_key"/>
+    <SwitchPreference android:icon="@drawable/ic_baseline_touch_app_24" android:title="@string/double_tap_to_seek_settings" android:summary="@string/double_tap_to_seek_settings_des" app:defaultValue="true" app:key="@string/double_tap_enabled_key"/>
+    <SwitchPreference android:icon="@drawable/netflix_pause" android:title="@string/double_tap_to_pause_settings" android:summary="@string/double_tap_to_pause_settings_des" app:defaultValue="true" app:key="@string/double_tap_pause_enabled_key"/>
+    <SeekBarPreference android:max="60" android:title="@string/double_tap_to_seek_amount_settings" android:defaultValue="10" app:adjustable="true" app:defaultValue="false" app:icon="@drawable/go_forward_30" app:key="@string/double_tap_seek_time_key" app:min="5" app:seekBarIncrement="5" app:showSeekBarValue="true"/>
+    <SwitchPreference android:icon="@drawable/baseline_sync_24" android:title="@string/episode_sync_settings" android:summary="@string/episode_sync_settings_des" app:defaultValue="true" app:key="@string/episode_sync_enabled_key"/>
+    <Preference android:icon="@drawable/ic_baseline_storage_24" android:title="@string/video_buffer_disk_settings" android:key="@string/video_buffer_disk_key" android:summary="@string/video_disk_description"/>
+    <Preference android:icon="@drawable/ic_baseline_storage_24" android:title="@string/video_buffer_size_settings" android:key="@string/video_buffer_size_key" android:summary="@string/video_ram_description"/>
+    <Preference android:icon="@drawable/ic_baseline_storage_24" android:title="@string/video_buffer_length_settings" android:key="@string/video_buffer_length_key" android:summary="@string/video_ram_description"/>
+    <Preference android:icon="@drawable/ic_baseline_delete_outline_24" android:title="@string/video_buffer_clear_settings" android:key="@string/video_buffer_clear_key"/>
+</PreferenceScreen>

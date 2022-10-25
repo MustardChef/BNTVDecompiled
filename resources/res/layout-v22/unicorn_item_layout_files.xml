@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/rl_file_root" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="70dp" android:paddingVertical="4dp">
+    <ImageView android:id="@+id/item_icon" android:layout_width="50dp" android:layout_height="30dp" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:src="@drawable/unicorn_ic_file" android:layout_centerVertical="true" android:layout_alignParentStart="true" android:layout_marginHorizontal="10dp" android:layout_marginVertical="10dp" app:tint="?attr/res_0x7f040551_unicorn_file_icontint"/>
+    <RelativeLayout android:id="@+id/rl_folder_details" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:layout_toStartOf="@+id/rg_selected" android:layout_toEndOf="@+id/item_icon">
+        <TextView android:textSize="16sp" android:textColor="?attr/res_0x7f040550_unicorn_file_heading" android:ellipsize="end" android:id="@+id/tv_file_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1"/>
+        <TextView android:textSize="12sp" android:textColor="?attr/res_0x7f040553_unicorn_file_subheading" android:id="@+id/tv_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/tv_file_name"/>
+    </RelativeLayout>
+    <RadioButton android:id="@+id/rg_selected" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:layout_alignParentEnd="true"/>
+</RelativeLayout>

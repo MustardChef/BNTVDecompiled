@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/result_top_bar" android:background="?attr/primaryGrayBackground" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/result_padding" android:paddingEnd="@dimen/result_padding">
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/result_mini_sync" android:paddingTop="5dp" android:focusable="false" android:focusableInTouchMode="false" android:fadingEdge="horizontal" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="wrap_content" android:requiresFadingEdge="horizontal" android:paddingStart="10dp" android:paddingEnd="10dp" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="end" android:layout_gravity="end|center_vertical" android:id="@+id/media_route_button_holder" android:layout_width="match_parent" android:layout_height="50dp">
+            <androidx.mediarouter.app.MediaRouteButton android:layout_gravity="end|center_vertical" android:id="@+id/media_route_button" android:visibility="gone" android:layout_width="50dp" android:layout_height="50dp" android:mediaRouteTypes="user" app:mediaRouteButtonTint="?attr/textColor"/>
+            <ImageView android:layout_gravity="end|center_vertical" android:id="@+id/result_recommendations_btt" android:background="?android:attr/selectableItemBackgroundBorderless" android:visibility="gone" android:nextFocusLeft="@+id/result_search" android:nextFocusRight="@+id/result_bookmark_button" android:nextFocusUp="@+id/result_back" android:nextFocusDown="@+id/result_description" android:layout_width="25dp" android:layout_height="25dp" android:layout_margin="5dp" android:src="@drawable/baseline_list_alt_24" android:contentDescription="@string/result_open_in_browser" android:elevation="10dp" app:tint="?attr/textColor"/>
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.discord.panels.OverlappingPanelsLayout android:id="@+id/result_overlapping_panels" android:layout_width="match_parent" android:layout_height="match_parent">
+            <FrameLayout android:layout_gravity="start" android:id="@+id/start_panel" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent">
+                <include layout="@layout/result_sync"/>
+            </FrameLayout>
+            <FrameLayout android:layout_gravity="center" android:id="@+id/center_panel" android:layout_width="match_parent" android:layout_height="match_parent">
+                <include layout="@layout/fragment_result"/>
+            </FrameLayout>
+            <FrameLayout android:layout_gravity="end" android:id="@+id/end_panel" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+        </com.discord.panels.OverlappingPanelsLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton android:id="@+id/result_bookmark_fab" android:visibility="gone" app:icon="@drawable/ic_baseline_bookmark_24" style="@style/ExtendedFloatingActionButton"/>
+            <fragment android:id="@+id/cast_mini_controller" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" app:castControlButtons="@array/cast_mini_controller_control_buttons" app:customCastBackgroundColor="?attr/primaryBlackBackground" class="com.lagradost.cloudstream3.ui.MyMiniControllerFragment"/>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

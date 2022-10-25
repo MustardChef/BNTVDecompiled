@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/res_0x7f0800ac_play_to_pause__0">
+    <target android:name="path" android:animation="@drawable/res_0x7f0800ad_play_to_pause__1"/>
+</animated-vector>

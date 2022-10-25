@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:nextFocusDown="@+id/nginx_text_input" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="?attr/textColor" android:id="@+id/text1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="10dp" android:paddingStart="?android:attr/listPreferredItemPaddingStart" android:paddingEnd="?android:attr/listPreferredItemPaddingEnd" android:layout_rowWeight="1"/>
+    <EditText android:id="@+id/nginx_text_input" android:paddingTop="10dp" android:nextFocusLeft="@+id/apply_btt" android:nextFocusRight="@+id/cancel_btt" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="60dp" android:inputType="text" android:requiresFadingEdge="vertical" android:layout_rowWeight="1" android:layout_marginHorizontal="10dp"/>
+    <LinearLayout android:gravity="end|bottom" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@+id/apply_btt_holder" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginTop="-60dp">
+        <com.google.android.material.button.MaterialButton android:layout_gravity="end|center_vertical" android:id="@+id/apply_btt" android:layout_width="wrap_content" android:text="@string/sort_apply" style="@style/WhiteButton"/>
+        <com.google.android.material.button.MaterialButton android:layout_gravity="end|center_vertical" android:id="@+id/cancel_btt" android:layout_width="wrap_content" android:text="@string/sort_cancel" style="@style/BlackButton"/>
+    </LinearLayout>
+</LinearLayout>

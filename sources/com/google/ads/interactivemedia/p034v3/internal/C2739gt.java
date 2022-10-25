@@ -1,0 +1,31 @@
+package com.google.ads.interactivemedia.p034v3.internal;
+
+/* compiled from: IMASDK */
+/* renamed from: com.google.ads.interactivemedia.v3.internal.gt */
+/* loaded from: classes2.dex */
+public final class C2739gt {
+
+    /* renamed from: a */
+    public static final C2739gt f7445a = new C2739gt(false);
+
+    /* renamed from: b */
+    public final boolean f7446b = false;
+
+    public C2739gt(boolean z) {
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        C2739gt c2739gt = (C2739gt) obj;
+        return true;
+    }
+
+    public final int hashCode() {
+        return 1;
+    }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:paddingTop="20dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="20dp" android:paddingEnd="20dp">
+        <androidx.cardview.widget.CardView android:layout_gravity="center_vertical" android:id="@+id/account_main_profile_picture_holder" android:layout_width="35dp" android:layout_height="35dp" app:cardCornerRadius="100dp">
+            <ImageView android:id="@+id/account_main_profile_picture" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </androidx.cardview.widget.CardView>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="20dp" android:paddingEnd="20dp">
+            <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="?attr/textColor" android:id="@+id/account_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_rowWeight="1"/>
+            <TextView android:textSize="15sp" android:textColor="?attr/grayTextColor" android:layout_gravity="center_vertical" android:id="@+id/account_site" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_rowWeight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:id="@+id/account_switch_account" android:text="@string/switch_account" style="@style/SettingsItem"/>
+    <TextView android:id="@+id/account_logout" android:text="@string/logout" style="@style/SettingsItem">
+        <requestFocus/>
+    </TextView>
+</LinearLayout>

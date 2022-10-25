@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="?attr/res_0x7f04054c_unicorn_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/appBar" android:background="?attr/res_0x7f04054c_unicorn_background" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:background="?attr/res_0x7f04054c_unicorn_background" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginHorizontal="8dp" app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_dir_path" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingVertical="8dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <RelativeLayout android:id="@+id/rl_progress" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/rv_dir_path">
+            <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:progressTint="@color/unicorn_colorAccent"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rl_no_files" android:background="?attr/res_0x7f04054c_unicorn_background" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/rv_dir_path">
+            <TextView android:textSize="14sp" android:textColor="?attr/res_0x7f040556_unicorn_secondarytextcolor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unicorn_no_files" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_files" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/rv_dir_path"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_gravity="end|bottom" android:id="@+id/fab_select" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16dp" android:src="@drawable/unicorn_ic_done" app:borderWidth="0dp" app:maxImageSize="32dp"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,12 @@
+package com.google.ads.interactivemedia.p034v3.internal;
+
+/* compiled from: IMASDK */
+/* renamed from: com.google.ads.interactivemedia.v3.internal.aes */
+/* loaded from: classes2.dex */
+public final class aes extends Exception {
+    private static final long serialVersionUID = 1;
+
+    public aes(String str) {
+        super(str);
+    }
+}

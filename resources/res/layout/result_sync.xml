@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:id="@+id/result_sync_holder" android:padding="16dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16sp" android:textStyle="bold" android:id="@+id/result_sync_names" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="MyAnimeList, AniList"/>
+            <LinearLayout android:orientation="horizontal" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="end|center_vertical" android:id="@+id/result_sync_sub_episode" android:background="?android:attr/selectableItemBackgroundBorderless" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/baseline_remove_24" app:tint="?attr/textColor"/>
+                <EditText android:textSize="20sp" android:textColorHint="?attr/grayTextColor" android:id="@+id/result_sync_current_episodes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="number" style="@style/AppEditStyle"/>
+                <TextView android:textSize="20sp" android:textColor="?attr/textColor" android:layout_gravity="center_vertical" android:id="@+id/result_sync_max_episodes" android:paddingBottom="1dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <ImageView android:layout_gravity="end|center_vertical" android:id="@+id/result_sync_add_episode" android:background="?android:attr/selectableItemBackgroundBorderless" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_baseline_add_24" app:tint="?attr/textColor"/>
+            </LinearLayout>
+            <androidx.core.widget.ContentLoadingProgressBar android:layout_gravity="end|center_vertical" android:id="@+id/result_sync_episodes" android:padding="10dp" android:layout_width="match_parent" android:layout_height="20dp" android:max="100" android:progress="0" android:indeterminate="false" android:progressBackgroundTint="?attr/colorPrimary" style="?android:attr/progressBarStyleHorizontal"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="17sp" android:textColor="?attr/textColor" android:layout_gravity="center_vertical" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sync_score"/>
+                <com.google.android.material.button.MaterialButton android:layout_gravity="center_vertical" android:id="@+id/result_sync_score_text" android:layout_width="wrap_content" android:layout_height="30dp" android:minWidth="0dp" android:text="7/10" android:layout_marginStart="0dp" style="@style/BlackButton"/>
+            </LinearLayout>
+            <com.google.android.material.slider.Slider android:value="4" android:id="@+id/result_sync_rating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:stepSize="1" android:valueFrom="0" android:valueTo="10" android:layout_marginStart="-5dp" android:layout_marginEnd="-5dp" app:labelStyle="@style/BlackLabel" app:thumbRadius="10dp" app:tickVisible="false"/>
+            <FrameLayout android:orientation="horizontal" android:paddingTop="12dp" android:paddingBottom="12dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/home_parent_item_title" style="@style/WatchHeaderText"/>
+                <ImageView android:layout_gravity="end|center_vertical" android:layout_width="30dp" android:layout_height="match_parent" android:src="@drawable/ic_baseline_arrow_forward_24" android:contentDescription="@string/home_more_info" android:layout_marginEnd="5dp" app:tint="?attr/textColor"/>
+            </FrameLayout>
+            <ListView android:id="@+id/result_sync_check" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_rowWeight="1"/>
+            <com.google.android.material.button.MaterialButton android:visibility="gone" android:layout_width="match_parent" android:layout_marginTop="10dp" android:text="@string/type_watching" style="@style/WhiteButton"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/result_sync_set_score" android:layout_width="match_parent" android:layout_marginTop="10dp" android:text="@string/upload_sync" app:icon="@drawable/baseline_sync_24" style="@style/BlackButton"/>
+        </LinearLayout>
+    </ScrollView>
+    <com.facebook.shimmer.ShimmerFrameLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/result_sync_loading_shimmer" android:padding="15dp" android:layout_width="match_parent" android:layout_height="match_parent" app:shimmer_auto_start="true" app:shimmer_base_alpha="0.2" app:shimmer_duration="@integer/loading_time" app:shimmer_highlight_alpha="0.3">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Space android:layout_width="match_parent" android:layout_height="30dp"/>
+            <include layout="@layout/loading_line_short"/>
+            <include layout="@layout/loading_line"/>
+            <Space android:layout_width="match_parent" android:layout_height="30dp"/>
+            <include layout="@layout/loading_line_short"/>
+            <include layout="@layout/loading_line"/>
+            <Space android:layout_width="match_parent" android:layout_height="30dp"/>
+            <include layout="@layout/loading_line_short"/>
+            <include layout="@layout/loading_line_short"/>
+            <include layout="@layout/loading_line_short"/>
+            <include layout="@layout/loading_line_short"/>
+            <include layout="@layout/loading_line_short"/>
+            <Space android:layout_width="match_parent" android:layout_height="30dp"/>
+            <include layout="@layout/loading_line"/>
+            <include layout="@layout/loading_line"/>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</FrameLayout>

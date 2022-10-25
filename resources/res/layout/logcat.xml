@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="60dp">
+        <TextView android:textSize="15sp" android:textColor="?attr/textColor" android:id="@+id/text1" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_rowWeight="1"/>
+    </ScrollView>
+    <HorizontalScrollView android:gravity="end|bottom" android:layout_gravity="bottom" android:id="@+id/apply_btt_holder" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginTop="-60dp">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent">
+            <com.google.android.material.button.MaterialButton android:layout_gravity="end|center_vertical" android:id="@+id/save_btt" android:nextFocusRight="@+id/copy_btt" android:layout_width="wrap_content" android:text="@string/sort_save" style="@style/WhiteButton"/>
+            <com.google.android.material.button.MaterialButton android:layout_gravity="end|center_vertical" android:id="@+id/copy_btt" android:nextFocusLeft="@+id/save_btt" android:nextFocusRight="@+id/clear_btt" android:layout_width="wrap_content" android:text="@string/sort_copy" style="@style/BlackButton"/>
+            <com.google.android.material.button.MaterialButton android:layout_gravity="end|center_vertical" android:id="@+id/clear_btt" android:nextFocusLeft="@+id/copy_btt" android:nextFocusRight="@+id/close_btt" android:layout_width="wrap_content" android:text="@string/sort_clear" style="@style/BlackButton"/>
+            <com.google.android.material.button.MaterialButton android:layout_gravity="end|center_vertical" android:id="@+id/close_btt" android:nextFocusLeft="@+id/clear_btt" android:layout_width="wrap_content" android:text="@string/sort_close" style="@style/BlackButton"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

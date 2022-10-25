@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference android:icon="@drawable/ic_baseline_add_24" android:title="@string/add_site_pref" android:key="@string/override_site_key" android:summary="@string/add_site_summary"/>
+    <Preference android:icon="@drawable/ic_baseline_dns_24" android:title="@string/dns_pref" android:key="@string/dns_key" android:summary="@string/dns_pref_summary"/>
+    <Preference android:icon="@drawable/netflix_download" android:title="@string/download_path_pref" android:key="@string/download_path_key"/>
+    <Preference android:icon="@drawable/ic_baseline_warning_24" android:title="@string/legal_notice" android:key="@string/legal_notice_key"/>
+    <Preference android:icon="@drawable/ic_github_logo" android:title="@string/github" app:summary="CloudStream-3"/>
+    <Preference android:icon="@drawable/quick_novel_icon" android:title="@string/lightnovel" app:isPreferenceVisible="false" app:summary="https://github.com/LagradOst/QuickNovel">
+        <intent android:action="android.intent.action.VIEW" android:data="https://github.com/LagradOst/QuickNovel"/>
+    </Preference>
+    <Preference android:icon="@drawable/ic_baseline_discord_24" android:title="@string/discord" app:isPreferenceVisible="false" app:summary="https://discord.gg/5Hus6fM">
+        <intent android:action="android.intent.action.VIEW" android:data="https://discord.gg/5Hus6fM"/>
+    </Preference>
+    <Preference android:icon="@drawable/ic_popcorn_24" android:title="@string/benene" android:key="@string/benene_count" app:summary="@string/benene_des"/>
+</PreferenceScreen>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/res_0x7f0800a5_mute_to_unmute__0">
+    <target android:name="strike_thru_path" android:animation="@drawable/res_0x7f0800a6_mute_to_unmute__1"/>
+    <target android:name="strike_thru_mask" android:animation="@drawable/res_0x7f0800a7_mute_to_unmute__2"/>
+    <target android:name="left_corner_mask" android:animation="@drawable/res_0x7f0800a8_mute_to_unmute__3"/>
+    <target android:name="right_corner_mask" android:animation="@drawable/res_0x7f0800a9_mute_to_unmute__4"/>
+</animated-vector>

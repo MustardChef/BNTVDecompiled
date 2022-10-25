@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference android:icon="@drawable/ic_baseline_color_lens_24" android:title="@string/primary_color_settings" android:key="@string/primary_color_key"/>
+    <Preference android:icon="@drawable/ic_baseline_color_lens_24" android:title="@string/app_theme_settings" android:key="@string/app_theme_key" app:isPreferenceVisible="false"/>
+    <Preference android:icon="@drawable/ic_baseline_tv_24" android:title="@string/app_layout" android:key="@string/app_layout_key"/>
+    <Preference android:icon="@drawable/ic_baseline_tv_24" android:title="@string/poster_ui_settings" android:key="@string/poster_ui_key"/>
+    <SwitchPreference android:icon="@drawable/search_icon" android:title="@string/advanced_search" android:summary="@string/advanced_search_des" app:defaultValue="true" app:key="advanced_search"/>
+    <SwitchPreference android:icon="@drawable/baseline_grid_view_24" android:title="@string/bottom_title_settings" android:key="@string/bottom_title_key" android:summary="@string/bottom_title_settings_des" android:defaultValue="true" app:isPreferenceVisible="false"/>
+    <SwitchPreference android:icon="@drawable/baseline_theaters_24" android:title="@string/show_trailers_settings" android:key="@string/show_trailers_key" android:defaultValue="true"/>
+    <SwitchPreference android:icon="@drawable/ic_baseline_skip_next_24" android:title="@string/show_fillers_settings" android:key="@string/show_fillers_key" android:defaultValue="false"/>
+    <SwitchPreference android:icon="@drawable/ic_baseline_play_arrow_24" android:title="@string/random_button_settings" android:summary="@string/random_button_settings_desc" app:defaultValue="false" app:isPreferenceVisible="false" app:key="@string/random_button_key"/>
+</PreferenceScreen>

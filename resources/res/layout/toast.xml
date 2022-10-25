@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:id="@+id/toast_layout_root" android:background="?attr/primaryBlackBackground" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" app:cardBackgroundColor="?attr/primaryBlackBackground" app:cardCornerRadius="10dp">
+    <TextView android:textColor="?attr/textColor" android:id="@+id/text" android:padding="20dp" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+</androidx.cardview.widget.CardView>

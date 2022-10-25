@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@null" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="50">
+        <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="?attr/textColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="10dp" android:text="@string/pick_source" android:paddingStart="?android:attr/listPreferredItemPaddingStart" android:paddingEnd="?android:attr/listPreferredItemPaddingEnd" android:layout_rowWeight="1"/>
+        <ListView android:id="@+id/sort_providers" android:background="?attr/primaryBlackBackground" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="-10dp" android:requiresFadingEdge="vertical" android:layout_rowWeight="1"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/sort_subtitles_holder" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="50">
+        <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="?attr/textColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="10dp" android:text="@string/pick_subtitle" android:paddingStart="?android:attr/listPreferredItemPaddingStart" android:paddingEnd="?android:attr/listPreferredItemPaddingEnd" android:layout_rowWeight="1"/>
+        <ListView android:id="@+id/sort_subtitles" android:background="?attr/primaryBlackBackground" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="-10dp" android:requiresFadingEdge="vertical" android:layout_rowWeight="1"/>
+    </LinearLayout>
+</LinearLayout>

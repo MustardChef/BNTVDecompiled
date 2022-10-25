@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@null" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="60dp" android:baselineAligned="false">
+        <LinearLayout android:orientation="vertical" android:id="@+id/sort_sources_holder" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="50">
+            <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="?attr/textColor" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/pick_source" android:paddingStart="?android:attr/listPreferredItemPaddingStart" android:paddingEnd="?android:attr/listPreferredItemPaddingEnd" android:layout_rowWeight="1"/>
+            <ListView android:id="@+id/sort_providers" android:background="?attr/primaryGrayBackground" android:nextFocusLeft="@+id/sort_subtitles" android:nextFocusRight="@+id/apply_btt" android:layout_width="match_parent" android:layout_height="match_parent" android:requiresFadingEdge="vertical" android:layout_rowWeight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/sort_subtitles_holder" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="50">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:id="@+id/subtitles_click_settings" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:foreground="?attr/selectableItemBackgroundBorderless" android:layout_rowWeight="1">
+                    <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="?attr/textColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pick_subtitle" android:paddingStart="?android:attr/listPreferredItemPaddingStart" android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"/>
+                    <TextView android:textSize="15sp" android:textColor="?attr/textColor" android:gravity="center" android:layout_gravity="center" android:id="@+id/subtitles_encoding_format" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <ImageView android:layout_gravity="end|center_vertical" android:visibility="gone" android:layout_width="25dp" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:src="@drawable/ic_outline_settings_24" android:contentDescription="@string/home_change_provider_img_des" android:layout_marginEnd="10dp"/>
+            </LinearLayout>
+            <ListView android:id="@+id/sort_subtitles" android:background="?attr/primaryGrayBackground" android:nextFocusLeft="@+id/sort_providers" android:nextFocusRight="@+id/cancel_btt" android:layout_width="match_parent" android:layout_height="match_parent" android:requiresFadingEdge="vertical" android:layout_rowWeight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="end|bottom" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@+id/apply_btt_holder" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginTop="-60dp">
+        <com.google.android.material.button.MaterialButton android:layout_gravity="end|center_vertical" android:id="@+id/apply_btt" android:layout_width="wrap_content" android:text="@string/sort_apply" style="@style/WhiteButton"/>
+        <com.google.android.material.button.MaterialButton android:layout_gravity="end|center_vertical" android:id="@+id/cancel_btt" android:layout_width="wrap_content" android:text="@string/sort_cancel" style="@style/BlackButton"/>
+    </LinearLayout>
+</LinearLayout>

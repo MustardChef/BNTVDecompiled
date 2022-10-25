@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/quick_search_root" android:background="?attr/primaryGrayBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+        <ImageView android:layout_gravity="center" android:id="@+id/quick_search_back" android:background="?android:attr/selectableItemBackgroundBorderless" android:layout_width="25dp" android:layout_height="wrap_content" android:src="@drawable/ic_baseline_arrow_back_24" android:foregroundGravity="center" app:tint="@android:color/white">
+            <requestFocus/>
+        </ImageView>
+        <FrameLayout android:layout_gravity="center_vertical" android:background="@drawable/search_background" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginStart="10dp">
+            <androidx.appcompat.widget.SearchView android:layout_gravity="center_vertical" android:id="@+id/quick_search" android:nextFocusLeft="@+id/search_filter" android:nextFocusRight="@+id/search_filter" android:nextFocusDown="@+id/search_autofit_results" android:layout_width="match_parent" android:layout_height="match_parent" android:inputType="text" android:imeOptions="actionSearch" android:iconifiedByDefault="false" android:paddingStart="-10dp" app:iconifiedByDefault="false" app:queryBackground="@color/transparent" app:queryHint="@string/search_hint" app:searchIcon="@drawable/search_icon">
+                <androidx.core.widget.ContentLoadingProgressBar android:layout_gravity="center" android:id="@+id/quick_search_loading_bar" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginStart="-35dp" android:progressTint="@color/white" android:foregroundTint="@color/white" style="@style/Widget.AppCompat.ProgressBar"/>
+            </androidx.appcompat.widget.SearchView>
+        </FrameLayout>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/quick_search_master_recycler" android:background="?attr/primaryBlackBackground" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <com.lagradost.cloudstream3.p041ui.AutofitRecyclerView android:orientation="vertical" android:id="@+id/quick_search_autofit_results" android:background="?attr/primaryBlackBackground" android:paddingTop="5dp" android:visibility="gone" android:nextFocusLeft="@+id/nav_rail_view" android:clipToPadding="false" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="8dp" android:paddingEnd="8dp" app:spanCount="3"/>
+</LinearLayout>

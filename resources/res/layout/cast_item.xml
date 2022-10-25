@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/episode_holder" android:nextFocusLeft="@+id/episode_poster" android:nextFocusRight="@+id/result_episode_download" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:foreground="@drawable/outline_drawable" app:cardBackgroundColor="@color/transparent" app:cardCornerRadius="@dimen/rounded_image_radius" app:cardElevation="0dp">
+    <LinearLayout android:orientation="vertical" android:padding="5dp" android:layout_width="100dp" android:layout_height="wrap_content">
+        <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView android:layout_width="70dp" android:layout_height="70dp" android:foreground="@drawable/outline_drawable" app:cardCornerRadius="35dp">
+                <ImageView android:id="@+id/actor_image" android:nextFocusLeft="@+id/result_episode_download" android:nextFocusRight="@+id/episode_holder" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:contentDescription="@string/episode_poster_img_des"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:layout_gravity="end|bottom" android:id="@+id/voice_actor_image_holder" android:layout_width="40dp" android:layout_height="40dp" android:foreground="@drawable/outline_drawable" app:cardCornerRadius="20dp">
+                <ImageView android:id="@+id/voice_actor_image" android:nextFocusLeft="@+id/result_episode_download" android:nextFocusRight="@+id/episode_holder" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:contentDescription="@string/episode_poster_img_des"/>
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:paddingTop="3dp" android:paddingBottom="3dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textStyle="bold" android:textColor="?attr/textColor" android:gravity="center_horizontal" android:id="@+id/actor_name" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textColor="?attr/grayTextColor" android:gravity="center_horizontal" android:id="@+id/voice_actor_name" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textColor="?attr/grayTextColor" android:gravity="center_horizontal" android:id="@+id/actor_extra" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

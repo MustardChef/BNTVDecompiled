@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ListView android:id="@+id/listview1" android:nextFocusLeft="@+id/apply_btt" android:nextFocusRight="@+id/cancel_btt" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="60dp" android:minHeight="0dp" android:requiresFadingEdge="vertical" android:layout_rowWeight="1"/>
+    <HorizontalScrollView android:fadingEdge="horizontal" android:clipToPadding="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-60dp" android:requiresFadingEdge="horizontal" android:paddingStart="10dp" android:paddingEnd="10dp">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.google.android.material.button.MaterialButton android:id="@+id/home_select_movies" android:nextFocusRight="@+id/home_select_tv_series" android:text="@string/movies" style="@style/RoundedSelectableButton"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/home_select_tv_series" android:nextFocusLeft="@+id/home_select_movies" android:nextFocusRight="@+id/home_select_anime" android:text="@string/tv_series" style="@style/RoundedSelectableButton"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/home_select_anime" android:nextFocusLeft="@+id/home_select_tv_series" android:nextFocusRight="@+id/home_select_asian" android:text="@string/anime" style="@style/RoundedSelectableButton"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/home_select_asian" android:nextFocusLeft="@+id/home_select_anime" android:nextFocusRight="@+id/home_select_cartoons" android:text="@string/asian_drama" style="@style/RoundedSelectableButton"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/home_select_cartoons" android:nextFocusLeft="@+id/home_select_asian" android:nextFocusRight="@+id/home_select_documentaries" android:text="@string/cartoons" style="@style/RoundedSelectableButton"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/home_select_documentaries" android:nextFocusLeft="@+id/home_select_cartoons" android:text="@string/documentaries" style="@style/RoundedSelectableButton"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <LinearLayout android:gravity="end|bottom" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@+id/apply_btt_holder" android:visibility="gone" android:layout_width="match_parent" android:layout_height="60dp">
+        <com.google.android.material.button.MaterialButton android:layout_gravity="end|center_vertical" android:id="@+id/apply_btt" android:layout_width="wrap_content" android:text="@string/sort_apply" style="@style/WhiteButton"/>
+        <com.google.android.material.button.MaterialButton android:layout_gravity="end|center_vertical" android:id="@+id/cancel_btt" android:layout_width="wrap_content" android:text="@string/sort_cancel" style="@style/BlackButton"/>
+    </LinearLayout>
+</LinearLayout>
